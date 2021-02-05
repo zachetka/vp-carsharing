@@ -1,20 +1,20 @@
 .menu {    
-    &__item {
-        display: inline-block;
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
+    &__list {
+        display: flex;
+    }
+    &__item {        
+        margin: 0 15px;
     }
     &__link {
-        padding-bottom: 5px;
+        padding: 6px 0 5px;
         font-size: 18px;
         line-height: 21px;
         color: $white;
-        text-transform: uppercase;
-        
+        text-transform: uppercase;      
+        border-bottom: 1px solid transparent;  
+        transition: all .5s;
         &:hover {
-            border-bottom: 1px solid #FEFEFE;
-            
+            border-bottom: 1px solid #FEFEFE;            
         }
     }
 }

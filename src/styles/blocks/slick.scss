@@ -1,0 +1,20 @@
+.cover__slider .slick-dots {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-dots button {
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background-color: $primary;
+}
+
+.slick-active button {
+    width: 16px;
+    height: 16px;
+}

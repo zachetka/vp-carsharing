@@ -15,13 +15,11 @@ body {
     font-family: $fontFamilyFirst;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.1875;
+    line-height: 19px;
     color: $dark;
 }
 
-a {
-    display: inline-block;
-    color: $black;
+a {   
     text-decoration: none;
 }
 

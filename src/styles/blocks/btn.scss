@@ -1,0 +1,20 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: $accent;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    border: 1px solid transparent;
+    transition: all .5s;
+    &:hover {
+        background-color: $white;
+        color: $accent;
+        border: 1px solid $accent;
+    }
+}
