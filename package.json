@@ -39,5 +39,9 @@
         "node-sass": "^5.0.0",
         "postcss": "^8.2.1",
         "postcss-pxtorem": "^5.1.1"
+    },
+    "dependencies": {
+        "jquery": "^3.5.1",
+        "slick-carousel": "^1.8.1"
     }
 }

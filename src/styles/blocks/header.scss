@@ -1,1 +1,14 @@
-
+.header {    
+    background-color: $primary;
+    &__inner {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__phone {
+        font-size: 18px;
+        line-height: 21px;
+        color: $white;
+    }
+}

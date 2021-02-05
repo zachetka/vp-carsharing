@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    outline: none;
+}
+
+body {
+    font-family: $fontFamilyFirst;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.1875;
+    color: $dark;
+}
+
+a {
+    display: inline-block;
+    color: $black;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1220px;    
+}

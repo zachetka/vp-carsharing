@@ -28,28 +28,25 @@ const path = {
         css: `${srcPath}/styles/main.scss`,
         js: `${srcPath}/scripts/main.js`,        
         img: `${srcPath}/images/**/*.{jpg,png,svg,gif,ico}`,
-        font: `${srcPath}/fonts/**/*.{woff,woff2}`,
     },
     watch: {
         html: `${srcPath}/**/*.html`,
         css: `${srcPath}/**/*.scss`,
         js: `${srcPath}/**/*.js`,
         img: `${srcPath}/images/**/*.{jpg,png,svg,gif,ico}`,
-        font: `${srcPath}/fonts/**/*.{ttf,woff,woff2}`,
     },
     build: {
         html: destPath,
         css: `${destPath}/assets`,
         js: `${destPath}/assets`,
-        img: `${destPath}/assets/images`,        
-        font: `${destPath}/assets/fonts`,
+        img: `${destPath}/assets/images`,    
     },
     styleLibs: [
-        /*'node_modules/slick-carousel/slick/slick.css'*/
+        'node_modules/slick-carousel/slick/slick.css'
     ],
     scriptLibs: [
-        /*'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/slick-carousel/slick/slick.min.js'*/     
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/slick-carousel/slick/slick.min.js'
     ],
 };
 
@@ -70,7 +67,6 @@ function observe() {
     watch(path.watch.css, css);
     watch(path.watch.js, js);
     watch(path.watch.img, img);
-    watch(path.watch.font, font);
 }
 
 function html() {
@@ -159,12 +155,8 @@ function img() {
         .pipe(dest(path.build.img));
 }
 
-function font() {
-    return src(path.src.font).pipe(dest(path.build.font));
-}
-
 exports.default = series(
     clean,
-    parallel(html, css, js, img, font),
+    parallel(html, css, js, img),
     parallel(observe, server)
 );
