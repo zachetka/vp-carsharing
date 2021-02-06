@@ -1,5 +1,5 @@
 .menu {
-    @media (max-width: 860px){
+    @media (max-width: 800px){
         order: 1;                  
     }   
     &__btn {
@@ -21,21 +21,21 @@
             height: 2px;
             background-color: $white;
         }
-        @media (max-width: 860px){
+        @media (max-width: 800px){
             display: block;                      
         }
     } 
     &__list {
         display: flex; 
         transition: all .5s;       
-        @media (max-width: 860px){
+        @media (max-width: 800px){
             padding: 20px 0;
             display: block;
             position: absolute;
             top: 100px;
             left: 0;
             right: 0;
-            // z-index: -1;
+            // z-index: 2;
             background-color: $primary;
             text-align: center;
             transform: translateY(-500px);
@@ -45,7 +45,7 @@
         }
     }
     &__item {        
-        margin: 0 15px;
+        margin: 0 15px;        
     }
     &__link {
         padding: 6px 0 5px;
@@ -58,7 +58,7 @@
         &:hover {
             border-bottom: 1px solid #FEFEFE;            
         }
-        @media (max-width: 860px){
+        @media (max-width: 800px){
             padding: 20px 0;
             display: block;
             &:hover {

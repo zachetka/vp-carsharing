@@ -4,14 +4,29 @@
         display: flex;
         margin-bottom: 30px;
         text-align: center;
+        @media (max-width: 800px) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: 500px) {
+            margin-bottom: 0;
+        }
     }
     &__bottom {
         display: flex;
         align-items: flex-end;
+        @media (max-width: 1000px) {
+            flex-wrap: wrap;
+        }
     }
     &__content {
         padding-top: 90px;
         width: 50%;
+        @media (max-width: 1000px) {
+            padding-top: 0;
+        }
+        @media (max-width: 800px) {
+            width: 100%;
+        }
     }
     &__cotent-title {
         margin: 0 auto 20px;
@@ -24,26 +39,49 @@
         max-width: 470px;
         font-size: 24px;
         line-height: 28px;
+        @media (max-width: 500px) {
+            margin-bottom: 30px;
+        }
     }
     &__content-btn {
         margin: 0 auto;
     }
     &__slider {
         width: 50%;
+        @media (max-width: 800px) {
+            width: 100%;
+        }
     }
     &__slider-text {
         margin-right: 100px;
         font-family: $fontFamilySecond;
         font-weight: 500;
         text-align: right;
+        @media (max-width: 1000px) {
+            margin-right: 0;
+        }
         &--center {
             margin: 0 16px;
+            // @media (max-width: 400px) {
+            //     display: block;
+            //     margin: 8px 0;
+            // }
         }
     }
     &__cards {
         display: flex;
         justify-content: space-around;
         width: 50%;
+        @media (max-width: 1000px) {
+            width: 70%;
+        }
+        @media (max-width: 800px) {
+            width: 100%;
+        }
+        @media (max-width: 500px) {
+            flex-wrap: wrap;
+            margin: 20px;
+        }
     }
     &__card {
         padding: 10px;
@@ -56,24 +94,56 @@
         text-align: center;
         border: 1px solid $primary;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        transition: all .5s;
+        transition: all 0.5s;
         &:hover {
             transform: scale(1.25);
+        }
+        @media (max-width: 500px) {
+            margin: 10px;
+        }
+        @media (max-width: 400px) {
+            width: 100%;
+        height: 120px;
         }
     }
     &__links {
         margin: 0 70px 0 auto;
+        @media (max-width: 1000px) {
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        @media (max-width: 800px) {
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: center;
+        }
+        @media (max-width: 500px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
-    &__link {        
+    &__link {
         display: inline-block;
         margin: 0 10px;
         padding-bottom: 5px;
-        color: $dark;   
+        color: $dark;
         border-bottom: 1px solid $dark;
-        transition: all .5s;  
+        transition: all 0.5s;
+        @media (max-width: 1000px) {
+            padding-top: 30px;
+        }
+        @media (max-width: 800px) {
+            padding-top: 20px;
+        }
+        @media (max-width: 500px) {
+            padding-top: 0;            
+            margin-bottom: 10px;
+        }
         &:hover {
-            color: $accent;   
-            border-bottom: 1px solid $accent;  
-        }   
+            color: $accent;
+            border-bottom: 1px solid $accent;
+        }
     }
 }
