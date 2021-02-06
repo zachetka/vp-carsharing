@@ -1,0 +1,70 @@
+.advantages {
+    padding: 100px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__enum {
+        width: 300px;
+    }
+    &__enum-title {
+        margin-bottom: 48px;
+    }
+    &__enum-item {
+        position: relative;
+        margin-bottom: 27px;
+        padding-right: 26px;
+        text-align: right;
+        &--1 {
+            margin-right: 17px;
+        }
+        &--2 {
+            margin-right: 64px;
+        }
+        &--3 {
+            margin-right: 116px;
+        }
+        &--4 {
+            margin-right: 162px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: $primary;            
+        }
+    }
+    &__img {
+       margin-top: 50px; 
+    }
+    &__content {
+        padding-top: 90px;
+        width: 300px;
+        text-align: right;
+    }
+    &__content-text {
+        margin-bottom: 30px;
+        &--sm {
+            width: 220px;
+            margin-left: auto;
+        }
+    }
+    &__content-btn {
+        position: relative;
+        margin-left: auto;
+        padding-left: 30px;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 34px;
+            width: 25px;
+            height: 25px;
+            background-image: url('/src/images/play.svg');
+        }
+    }
+}
