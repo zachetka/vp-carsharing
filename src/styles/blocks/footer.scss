@@ -1,0 +1,25 @@
+.footer {
+    padding: 75px 0 24px;
+    background-color: $primary;
+    &__top {
+        margin-bottom: 21px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__phone {
+        font-size: 18px;
+        line-height: 21px;
+        color: $white;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: center;
+    }
+    &__social {
+        display: flex;
+    }
+    &__social-item {
+        margin: 0 15px;
+    }
+}
