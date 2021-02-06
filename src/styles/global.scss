@@ -19,7 +19,7 @@ body {
     color: $dark;
 }
 
-a {   
+a {
     text-decoration: none;
 }
 
@@ -36,8 +36,15 @@ button {
     cursor: pointer;
 }
 
+input:not([type=checkbox]):not([type=radio]), textarea {
+    display: block;
+    width: 100%;
+    resize: none;
+    font-family: $fontFamilyFirst;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 10px;
-    max-width: 1220px;    
+    max-width: 1220px;
 }

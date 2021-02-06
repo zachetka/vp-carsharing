@@ -5,13 +5,31 @@
         justify-content: space-between;
     }
     &__img {
+        width: 50%;
     }
-    &__title {
+    &__form {
+        padding: 74px 90px;
+        width: 50%;
     }
-    &__text {
+    &__form-title {
+        margin-bottom: 5px;
     }
-    &__input {
+    &__form-text {
+        margin-bottom: 30px;
     }
-    &__btn {
+    &__form-input {
+        padding: 20px 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $dark;
+        border: none;
+        border-bottom: 1px solid rgba($color: $black, $alpha: 0.1);
+        &::placeholder {
+            color: $dark;
+        }
+    }
+    &__form-btn {
+        margin-top: 50px;
     }
 }
