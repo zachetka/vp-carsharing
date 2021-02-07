@@ -1,31 +1,64 @@
 .advantages {
     padding: 100px 0;
+    @media (max-width: 800px) {
+        padding: 30px 0;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 800px) {
+            flex-wrap: wrap;
+        }
     }
     &__enum {
-        width: 300px;
+        flex: 0 0 300px;
+        @media (max-width: 500px) {
+            flex-basis: 50%;
+        }
+        @media (max-width: 400px) {
+            flex-basis: 100%;
+        }
     }
     &__enum-title {
         margin-bottom: 48px;
+        @media (max-width: 600px) {
+            margin-bottom: 30px;
+        }
     }
     &__enum-item {
         position: relative;
         margin-bottom: 27px;
         padding-right: 26px;
         text-align: right;
+        @media (max-width: 500px) {
+            text-align: left;
+            margin-bottom: 16px;
+            padding-right: 0;
+            padding-left: 26px;
+        }
         &--1 {
             margin-right: 17px;
+            @media (max-width: 500px) {
+                margin-right: 0;
+            }
         }
         &--2 {
             margin-right: 64px;
+            @media (max-width: 500px) {
+                margin-right: 0;
+            }
         }
         &--3 {
             margin-right: 116px;
+            @media (max-width: 500px) {
+                margin-right: 0;
+            }
         }
         &--4 {
             margin-right: 162px;
+            @media (max-width: 500px) {
+                margin-right: 0;
+            }
         }
         &::after {
             content: '';
@@ -36,22 +69,49 @@
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background-color: $primary;            
+            background-color: $primary;
+            @media (max-width: 500px) {
+                right: auto;
+                left: 0;
+            }
         }
     }
     &__img {
-       margin-top: 50px; 
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 2 auto;
+        @media (max-width: 800px) {
+            flex-basis: calc(100% - 300px);
+        }
+        @media (max-width: 500px) {
+            flex-basis: 50%;
+        }
+        @media (max-width: 400px) {
+            display: none;
+        }
     }
     &__content {
         padding-top: 90px;
-        width: 300px;
+        flex: 0 1 300px;
         text-align: right;
+        @media (max-width: 1000px) {
+            padding-top: 70px;
+        }
+        @media (max-width: 800px) {
+            padding-top: 20px;
+            flex-basis: 100%;
+        }   
     }
     &__content-text {
         margin-bottom: 30px;
         &--sm {
             width: 220px;
             margin-left: auto;
+            @media (max-width: 800px) {
+                width: 100%;
+            }  
         }
     }
     &__content-btn {

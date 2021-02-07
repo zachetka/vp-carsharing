@@ -1,5 +1,8 @@
 .footer {
     padding: 75px 0 24px;
+    @media (max-width: 800px) {
+        padding: 24px 0;
+    }
     background-color: $primary;
     &__top {
         margin-bottom: 21px;

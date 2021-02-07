@@ -1,5 +1,8 @@
 .reviews {
     padding: 100px 0;
+    @media (max-width: 800px) {
+        padding: 30px 0;
+    }
     color: $white;
     background-color: $primary;
     &__title {

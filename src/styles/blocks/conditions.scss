@@ -1,11 +1,24 @@
 .conditions {
     padding: 100px 0;
+    @media (max-width: 800px) {
+        padding: 30px 0;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 1100px) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: 800px) {
+            justify-content: center;           
+        }
     }
     &__content {
         width: 300px;
+        @media (max-width: 1100px) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
     }
     &__content-title {
         margin-bottom: 30px;
@@ -31,6 +44,14 @@
         &:hover {
             transform: scale(1.25);
         }
+        @media (max-width: 800px) {
+            margin: 15px;            
+        }
+        @media (max-width: 600px) {
+            width: 100%;
+            min-height: 220px;          
+        }
+
     }
     &__card-number {
         font-family: $fontFamilySecond;
@@ -43,6 +64,9 @@
         font-family: $fontFamilySecond;
         font-weight: 500;
         font-size: 18px;
-        line-height: 22px;     
+        line-height: 22px;  
+        @media (max-width: 600px) {
+            margin-bottom: 10px;         
+        }   
     }
 }
