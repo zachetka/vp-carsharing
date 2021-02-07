@@ -1,2 +1,2 @@
 # vp-carsharing
-Landing page "Каршеринг в Киеве LUX автомобили"
+Landing page "Каршеринг LUX автомобили"

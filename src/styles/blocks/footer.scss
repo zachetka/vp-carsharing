@@ -1,14 +1,22 @@
 .footer {
-    padding: 75px 0 24px;
+    padding: 75px 0 24px;    
+    background-color: $primary;
     @media (max-width: 800px) {
         padding: 24px 0;
     }
-    background-color: $primary;
     &__top {
         margin-bottom: 21px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
+    }
+    &__btn {
+        @media (max-width: 600px) {
+            margin-bottom: 21px;
+        }
     }
     &__phone {
         font-size: 18px;
@@ -17,7 +25,12 @@
     }
     &__bottom {
         display: flex;
-        justify-content: center;
+        justify-content: center;        
+    }
+    &__menu {
+        @media (max-width: 1000px) {
+            display: none;
+        }
     }
     &__social {
         display: flex;

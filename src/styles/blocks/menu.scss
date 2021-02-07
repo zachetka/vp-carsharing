@@ -1,4 +1,4 @@
-.menu {
+.menu {    
     @media (max-width: 800px){
         order: 1;                  
     }   
@@ -35,7 +35,6 @@
             top: 100px;
             left: 0;
             right: 0;
-            // z-index: 2;
             background-color: $primary;
             text-align: center;
             transform: translateY(-500px);
