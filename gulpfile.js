@@ -27,18 +27,21 @@ const path = {
         html: `${srcPath}/*.html`,
         css: `${srcPath}/styles/main.scss`,
         js: `${srcPath}/scripts/main.js`,        
+        php: `${srcPath}/scripts/*.php`,        
         img: `${srcPath}/images/**/*.{jpg,png,svg,gif,ico}`,
     },
     watch: {
         html: `${srcPath}/**/*.html`,
         css: `${srcPath}/**/*.scss`,
         js: `${srcPath}/**/*.js`,
+        php: `${srcPath}/**/*.php`,
         img: `${srcPath}/images/**/*.{jpg,png,svg,gif,ico}`,
     },
     build: {
         html: destPath,
         css: `${destPath}/assets`,
         js: `${destPath}/assets`,
+        php: `${destPath}/assets`,
         img: `${destPath}/assets/images`,    
     },
     styleLibs: [
@@ -66,6 +69,7 @@ function observe() {
     watch(path.watch.html, html);
     watch(path.watch.css, css);
     watch(path.watch.js, js);
+    watch(path.watch.php, php);
     watch(path.watch.img, img);
 }
 
@@ -139,6 +143,10 @@ function js() {
     }
 }
 
+function php() {
+    return src(path.src.php).pipe(dest(path.build.php));
+}
+
 function img() {    
     return src(path.src.img)
         .pipe(changed(path.build.img))
@@ -157,6 +165,6 @@ function img() {
 
 exports.default = series(
     clean,
-    parallel(html, css, js, img),
+    parallel(html, css, js, php, img),
     parallel(observe, server)
 );

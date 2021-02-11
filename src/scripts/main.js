@@ -37,4 +37,19 @@ $(function(){
     $('.menu__btn').on('click', function(){
         $('.menu__list').toggleClass('menu__list--active');
     });
+
+    $(".feedback__form").on("submit", function(){
+      var th = $(this);
+      $.ajax({
+        type: "POST",
+        url: "assets/mail.php",
+        data: th.serialize()
+      }).done(function() {
+        alert("Thank you!");
+        setTimeout(function() {          
+          th.trigger("reset");
+        }, 1000);
+      });
+      return false;
+    });
 });

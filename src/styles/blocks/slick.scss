@@ -8,8 +8,8 @@
     height: 8px;
     border: none;
     border-radius: 50%;
-    font-size: 0;
     background-color: $primary;
+    font-size: 0;
 }
 
 .slick-active button {
@@ -19,14 +19,14 @@
 
 .cover__slider .slick-dots {
     position: absolute;
-    right: 0;
     top: 50%;
+    right: 0;
     transform: translateY(-50%);
 }
 
 .reviews__slider .slick-dots button {
-    background-color: $accent;
     margin: 0 5px;
+    background-color: $accent;
 }
 
 .reviews__slider .slick-dots {

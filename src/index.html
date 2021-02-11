@@ -7,15 +7,14 @@
     <title>Каршеринг</title>
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link type="image/x-icon" href="assets/images/favicon.ico" rel="shortcut icon">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Roboto+Condensed&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
     <!-- CSS-стили -->
-    <link rel="stylesheet" href="assets/style.min.css">
+    <link href="assets/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -143,7 +142,7 @@
                         Именно для того, что бы Вам было приятно и безопасно пользоваться нашим сервисом на постоянной
                         основе, мы выделили несколько условий для того, чтобы взять машину в аренду.
                     </p>
-                    <a href="" class="conditions__content-btn btn">Скачать приложение</a>
+                    <a class="conditions__content-btn btn" href>Скачать приложение</a>
                 </div>
                 <div class="conditions__card">
                     <div class="conditions__card-number">01</div>
@@ -286,9 +285,15 @@
                     <p class="feedback__form-text">
                         Мы перезвоним Вам и проконсультируем по любому вопросу
                     </p>
-                    <input class="feedback__form-input" type="text" placeholder="Имя">
-                    <input class="feedback__form-input" type="text" placeholder="Телефон">
-                    <button class="feedback__form-btn btn">Оставить заявку</button>
+
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="Каршеринг">
+                    <input type="hidden" name="admin_email" value="mailformyservices@mail.ru">
+                    <input type="hidden" name="form_subject" value="Feedback Form">
+
+                    <input name="Имя" class="feedback__form-input" type="text" placeholder="Имя">
+                    <input name="Телефон" class="feedback__form-input" type="text" placeholder="Телефон">
+                    <button type="submit" class="feedback__form-btn btn">Оставить заявку</button>
                 </form>
             </div>
         </div>

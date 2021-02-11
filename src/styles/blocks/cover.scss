@@ -1,4 +1,6 @@
 .cover {
+    position: relative;
+    z-index: -2;
     padding: 50px 0 100px;
     @media (max-width: 800px) {
         padding: 50px 0 30px;
@@ -36,6 +38,10 @@
         max-width: 454px;
         font-size: 48px;
         line-height: 58px;
+        @media (max-width: 400px) {
+            font-size: 44px;
+            line-height: 54px;
+        }
     }
     &__content-text {
         margin: 0 auto 63px;
